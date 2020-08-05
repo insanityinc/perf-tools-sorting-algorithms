@@ -1,0 +1,10 @@
+# started on Wed Jul  1 01:44:58 2020
+
+
+ Performance counter stats for './sort 2 1 100000000':
+
+       81099124303      instructions             
+          31014981      cache-misses                                                
+
+      23.366457046 seconds time elapsed
+

@@ -1,0 +1,41 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+# Samples: 5K of event 'cycles'
+# Event count (approx.): 175688215492
+#
+# Overhead       Samples  Command      Shared Object                      Symbol
+# ........  ............  .......  .................  ..........................
+#
+    96.94%          5526     sort  sort               [.] sort3                 
+     0.84%            48     sort  sort               [.] ini_vector            
+     0.54%            31     sort  sort               [.] copy_vector           
+     0.43%            24     sort  libc-2.12.so       [.] __random              
+     0.40%            23     sort  libc-2.12.so       [.] __random_r            
+     0.16%             9     sort  [kernel.kallsyms]  [k] clear_page_c          
+     0.14%             8     sort  libc-2.12.so       [.] rand                  
+     0.06%             1     sort  [kernel.kallsyms]  [k] unroll_tree_refs      
+     0.05%             3     sort  sort               [.] rand@plt              
+     0.05%             3     sort  [kernel.kallsyms]  [k] run_timer_softirq     
+     0.04%             2     sort  [kernel.kallsyms]  [k] ktime_get             
+     0.04%             2     sort  [kernel.kallsyms]  [k] _spin_lock            
+     0.02%             1     sort  [kernel.kallsyms]  [k] get_page_from_freelist
+     0.02%             1     sort  [kernel.kallsyms]  [k] hrtimer_interrupt     
+     0.02%             1     sort  [kernel.kallsyms]  [k] __percpu_counter_add  
+     0.02%             1     sort  [kernel.kallsyms]  [k] __wake_up_common      
+     0.02%             1     sort  [kernel.kallsyms]  [k] rcu_process_gp_end    
+     0.02%             1     sort  [kernel.kallsyms]  [k] thread_return         
+     0.02%             1     sort  [kernel.kallsyms]  [k] scheduler_tick        
+     0.02%             1     sort  [kernel.kallsyms]  [k] apic_timer_interrupt  
+     0.02%             1     sort  [kernel.kallsyms]  [k] task_tick_fair        
+     0.02%             1     sort  [kernel.kallsyms]  [k] acct_update_integrals 
+     0.02%             1     sort  [kernel.kallsyms]  [k] sched_clock_tick      
+     0.02%             1     sort  [kernel.kallsyms]  [k] call_softirq          
+     0.02%             1     sort  [kernel.kallsyms]  [k] raise_softirq         
+     0.02%             1     sort  [kernel.kallsyms]  [k] __do_softirq          
+     0.02%             1     sort  [kernel.kallsyms]  [k] printk_tick           
+     0.02%             1     sort  [kernel.kallsyms]  [k] hrtimer_run_pending   
+     0.02%             1     sort  [kernel.kallsyms]  [k] update_cfs_shares     
+     0.02%             1     sort  [kernel.kallsyms]  [k] native_read_tsc       
+     0.00%             4     sort  [kernel.kallsyms]  [k] native_write_msr_safe 
+
+

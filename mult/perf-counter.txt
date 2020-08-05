@@ -1,0 +1,1 @@
+perf stat -e cpu-cycles,instructions,cache-references,cache-misses,branch-instructions,branch-misses,L1-dcache-loads,L1-dcache-loads-misses,L1-dcache-stores,L1-dcache-stores-misses,LLC-loads,LLC-loads-misses,LLC-stores,LLC-stores-misses,dTLB-loads,dTLB-loads-misses,dTLB-stores,dTLB-stores-misses,iTLB-loads,iTLB-loads-misses,branch-loads,branch-loads-misses ./naive

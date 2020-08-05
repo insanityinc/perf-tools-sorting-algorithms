@@ -1,0 +1,56 @@
+#!/bin/sh
+
+module load gcc/5.3.0
+module load gcc/6.1.0
+module load gcc/7.2.0
+
+make
+
+# exercise A
+
+# perf stat -o A1 -e instructions,cache-misses ./sort 1 1 100000000
+# perf stat -o A2 -e instructions,cache-misses ./sort 2 1 100000000
+# perf stat -o A3 -e instructions,cache-misses ./sort 3 1 100000000
+# perf stat -o A4 -e instructions,cache-misses ./sort 4 1 100000000
+
+# exercise B
+
+# perf record -F 99 ./sort 1 1 100000000
+# perf report -n --stdio >> B1
+
+# perf record -F 99 ./sort 2 1 100000000
+# perf report -n --stdio >> B2
+
+# perf record -F 99 ./sort 3 1 100000000
+# perf report -n --stdio >> B3
+
+# perf record -F 99 ./sort 4 1 100000000
+# perf report -n --stdio >> B4
+
+# exercise C
+
+# perf record -F 99 -ag ./sort 1 1 100000000
+# perf script | ./stackcollapse-perf.pl | ./flamegraph.pl> sortC1.svg
+
+# perf record -F 99 -ag ./sort 2 1 100000000
+# perf script | ./stackcollapse-perf.pl | ./flamegraph.pl> sortC2.svg
+
+# perf record -F 99 -ag ./sort 3 1 100000000
+# perf script | ./stackcollapse-perf.pl | ./flamegraph.pl> sortC3.svg
+
+# perf record -F 99 -ag ./sort 4 1 100000000
+# perf script | ./stackcollapse-perf.pl | ./flamegraph.pl> sortC4.svg
+
+# exercise D
+
+# perf record -g ./sort 1 1 100000000
+# perf annotate --stdio | cat D1
+
+# perf record -g ./sort 2 1 100000000
+# perf annotate --stdio | cat D2
+
+# perf record -g ./sort 3 1 100000000
+# perf annotate --stdio | cat D3
+
+# perf record -g ./sort 4 1 100000000
+# perf annotate --stdio | cat D4

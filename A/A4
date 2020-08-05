@@ -1,0 +1,10 @@
+# started on Wed Jul  1 01:46:19 2020
+
+
+ Performance counter stats for './sort 4 1 100000000':
+
+      171806556917      instructions             
+          45786786      cache-misses                                                
+
+      42.899045137 seconds time elapsed
+
